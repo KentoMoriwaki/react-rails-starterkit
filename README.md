@@ -3,4 +3,14 @@ React + Rails(API) Starter-kit
 
 ## Development
 
-Just run `foreman start`
+### Set up
+
+```sh
+script/bootstrap
+```
+
+### Run
+
+```
+script/server
+```
