@@ -4,11 +4,15 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'eval',
   context: path.resolve('./frontend'),
-  entry: [
-    'webpack-dev-server/client?http://localhost:5100',
-    'webpack/hot/only-dev-server',
-    './src/index'
-  ],
+  entry: {
+    javascriptt: [
+      'webpack-dev-server/client?http://localhost:5100',
+      'webpack/hot/only-dev-server',
+      'react-hot-loader/patch',
+      './src/index'
+    ],
+    html: './index.html'
+  },
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
@@ -25,6 +29,12 @@ module.exports = {
       test: /\.jsx?$/,
       loaders: ['babel'],
       exclude: /node_modules/,
+    }, {
+      test: /\.css$/,
+      loaders: ['style', 'css']
+    }, {
+      test: /\.html$/,
+      loader: 'file?name=[path][name].[ext]'
     }]
   }
 };

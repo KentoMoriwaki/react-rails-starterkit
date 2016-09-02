@@ -7,11 +7,14 @@ const port = process.env.PORT || '3000'
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
-  historyApiFallback: true
-}).listen(port, 'localhost', function (err, result) {
+  historyApiFallback: true,
+  stats: {
+    colors: true
+  }
+}).listen(port, 'localhost', function (err) {
   if (err) {
-    return console.log(err);
+    console.log(err);
   }
 
-  console.log(`Listening at http://localhost:${port}/`);
+  console.log(`Listening at localhost:${port}`);
 });
