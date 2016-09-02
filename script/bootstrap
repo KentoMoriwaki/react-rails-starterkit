@@ -3,4 +3,4 @@
 set -e
 
 bundle install
-cd frontend && npm install
+npm install
