@@ -44,8 +44,7 @@
     "webpack-dev-server": "^1.15.1"
   },
   "scripts": {
-    "start": "run",
-    "build": "run",
-    "eject": "run"
+    "start": "node server.js",
+    "build": "webpack"
   }
 }
