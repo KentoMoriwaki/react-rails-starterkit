@@ -33,7 +33,8 @@ module.exports = {
       test: /\.css$/,
       loaders: [
         'style',
-        'css?modules&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:8]'
+        'css?modules&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:8]',
+        'autoprefixer'
       ]
     }, {
       test: /\.html$/,

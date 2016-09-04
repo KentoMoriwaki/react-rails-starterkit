@@ -6,6 +6,7 @@
   background-color: #222;
   padding: 20px;
   color: white;
+  transition: all 200ms linear;
 }
 
 .intro {
