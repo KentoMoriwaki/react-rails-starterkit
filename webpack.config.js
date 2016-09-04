@@ -9,7 +9,7 @@ module.exports = {
       'webpack-dev-server/client?http://localhost:5100',
       'webpack/hot/only-dev-server',
       'react-hot-loader/patch',
-      './src/index'
+      './src/index.jsx'
     ],
     html: './index.html'
   },
