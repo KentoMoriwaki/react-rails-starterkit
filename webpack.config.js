@@ -31,7 +31,10 @@ module.exports = {
       exclude: /node_modules/,
     }, {
       test: /\.css$/,
-      loaders: ['style', 'css']
+      loaders: [
+        'style',
+        'css?modules&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:8]'
+      ]
     }, {
       test: /\.html$/,
       loader: 'file?name=[path][name].[ext]'
