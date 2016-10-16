@@ -23,6 +23,8 @@
 
 # production
 public/dist
+public/bundle.js
+public/index.html
 
 # misc
 .DS_Store
