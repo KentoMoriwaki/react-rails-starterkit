@@ -2,4 +2,7 @@
 
 set -eux
 
-foreman start
+PORT=3000 npm start &
+PORT=3001 bin/rails server -e development
+
+for job in `jobs -p`; do kill $job; done
