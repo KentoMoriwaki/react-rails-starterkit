@@ -38,7 +38,7 @@ module.exports = {
       loaders: [
         'style',
         'css?modules&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:8]',
-        'autoprefixer'
+        'postcss',
       ]
     }, {
       test: /\.html$/,
