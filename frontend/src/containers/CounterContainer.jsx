@@ -12,6 +12,7 @@ const CounterContainer = ({
   <Counter
     count={counter.count}
     onClick={actions.increaseCount}
+    //onClick={actions.increaseCountWithDelay}
   />
 );
 
