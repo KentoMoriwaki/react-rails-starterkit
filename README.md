@@ -5,7 +5,10 @@ React + Rails(API) Starter-kit
 
 ### Set up
 
+on macOS
+
 ```sh
+brew install yarn
 script/bootstrap
 ```
 
