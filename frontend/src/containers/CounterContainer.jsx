@@ -5,16 +5,24 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions';
 import Counter from '../components/Counter';
 
-const CounterContainer = ({
-  counter,
-  actions,
-}) => (
-  <Counter
-    count={counter.count}
-    onClick={actions.increaseCount}
-    //onClick={actions.increaseCountWithDelay}
-  />
-);
+class CounterContainer extends Component {
+
+  componentDidMount() {
+    const { actions } = this.props;
+    actions.loadCount();
+  }
+
+  render() {
+    const { counter, actions } = this.props;
+    return (
+      <Counter
+        count={counter.count}
+        onClick={actions.increaseCount}
+        onSave={actions.saveCount}
+      />
+    );
+  }
+}
 
 const mapState = (state, ownProps) => ({
   counter: state.counter,

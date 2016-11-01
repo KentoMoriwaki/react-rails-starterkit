@@ -1,1 +1,2 @@
 export const COUNT_INCREASED = 'COUNT_INCREASED';
+export const COUNT_UPDATED = 'COUNT_UPDATED';

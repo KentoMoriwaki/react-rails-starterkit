@@ -12,6 +12,12 @@ const counter = (state = initialState, action) => {
         count: state.count + 1,
       };
       break;
+    case actionTypes.COUNT_UPDATED:
+      return {
+        ...state,
+        count: action.count,
+      };
+      break;
     default:
   }
   return state;
